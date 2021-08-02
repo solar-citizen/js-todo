@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List UI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="todo">
+        <!-- profile -->
+        <div class="todo__profile">
+          <div class="profile-pic">
+            <img class="avatar" src="img/profile__avatar.jpg" alt="avatar" />
+          </div>
+        </div>
+        <!-- list -->
+        <div class="todo__list">
+          <div class="todo__title">
+            <h1>My Tasks</h1>
+          </div>
+          <div class="todo__tasks">
+            <ul class="tasks-list">
+              <li class="tasks-list__task">
+                <input class="task__check" type="checkbox" />
+                <span>Wake up</span>
+                <div class="task__delete"></div>
+              </li>
+              <li class="tasks-list__task">
+                <input class="task__check" type="checkbox" />
+                <span>Pay bills</span>
+                <div class="task__delete"></div>
+              </li>
+              <li class="tasks-list__task">
+                <input type="checkbox" class="task__check" />
+                <span>Read a book</span>
+                <div class="task__delete"></div>
+              </li>
+            </ul>
+            <form action="#" class="add-task">
+              <input type="text" class="add-task__input" />
+              <button class="add-task__btn">Add task</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+@import "includes/fonts";
+@import "includes/variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .todo {
+    max-width: 30rem;
+    width: 100%;
+    box-shadow: $boxShadow;
+
+    &__profile {
+      background: url("/img/profile__bg.jpg") center (center / cover) no-repeat;
+      height: 18.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // height: 100%;
+
+      .profile-pic {
+        position: relative;
+
+        .avatar {
+          // max-width: 6.5rem;
+          width: 6.5rem;
+          height: auto;
+          border: 1px solid transparent;
+          border-radius: 50%;
+          position: relative;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 6.5rem;
+          height: 6.5rem;
+          position: absolute;
+          border: 4px solid white;
+          border-radius: 50%;
+          top: -4px;
+          left: -4px;
+        }
+      }
+    }
+
+    &__list {
+      padding: 2rem;
+      padding-top: 2.75rem;
+
+      .todo__title {
+        color: #333;
+        font-size: 1.15rem;
+      }
+
+      .todo__tasks {
+        padding: 2.5rem 0; //
+
+        .tasks-list {
+          list-style: none;
+
+          &__task {
+            padding: 0.25rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.5rem;
+
+            .task__check {
+              width: 1.125rem;
+              height: 1.125rem;
+            }
+
+            span {
+              padding: 0 0.75rem;
+            }
+          }
+        }
+      }
+    }
+
+    .add-task {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+
+      & > * {
+        height: 3.375rem;
+        border-radius: 7px;
+      }
+
+      &__input {
+        padding: 0 0.75rem;
+        border: 1px solid #ccc;
+        box-shadow: $boxShadow inset;
+
+        &:hover,
+        &:focus,
+        &:active {
+          outline: $outline;
+          outline-style: auto;
+        }
+      }
+
+      &__btn {
+        margin-top: 1rem;
+        background-color: $btn;
+        color: white;
+        font-family: "Oswald", sans-serif;
+        font-size: 1.5rem;
+        border: 2px solid $btn;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $btnHov;
+          border: 2px solid $btnHov;
+        }
+
+        &:active {
+          background-color: $btnHov;
+          border: 2px solid #014211;
+        }
+      }
+    }
+  }
+}

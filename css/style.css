@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .todo {
+  max-width: 30rem;
+  width: 100%;
+  box-shadow: 0 0 1rem 1px #ccc;
+}
+main .todo__profile {
+  background: url("/img/profile__bg.jpg") center center/cover no-repeat;
+  height: 18.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .todo__profile .profile-pic {
+  position: relative;
+}
+main .todo__profile .profile-pic .avatar {
+  width: 6.5rem;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: relative;
+}
+main .todo__profile .profile-pic::before {
+  content: "";
+  display: block;
+  width: 6.5rem;
+  height: 6.5rem;
+  position: absolute;
+  border: 4px solid white;
+  border-radius: 50%;
+  top: -4px;
+  left: -4px;
+}
+main .todo__list {
+  padding: 2rem;
+  padding-top: 2.75rem;
+}
+main .todo__list .todo__title {
+  color: #333;
+  font-size: 1.15rem;
+}
+main .todo__list .todo__tasks {
+  padding: 2.5rem 0;
+}
+main .todo__list .todo__tasks .tasks-list {
+  list-style: none;
+}
+main .todo__list .todo__tasks .tasks-list__task {
+  padding: 0.25rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+}
+main .todo__list .todo__tasks .tasks-list__task .task__check {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+main .todo__list .todo__tasks .tasks-list__task span {
+  padding: 0 0.75rem;
+}
+main .todo .add-task {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+main .todo .add-task > * {
+  height: 3.375rem;
+  border-radius: 7px;
+}
+main .todo .add-task__input {
+  padding: 0 0.75rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 1rem 1px #ccc inset;
+}
+main .todo .add-task__input:hover, main .todo .add-task__input:focus, main .todo .add-task__input:active {
+  outline: 2px solid #969696;
+  outline-style: auto;
+}
+main .todo .add-task__btn {
+  margin-top: 1rem;
+  background-color: #037c1f;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  border: 2px solid #037c1f;
+  cursor: pointer;
+}
+main .todo .add-task__btn:hover {
+  background-color: #026319;
+  border: 2px solid #026319;
+}
+main .todo .add-task__btn:active {
+  background-color: #026319;
+  border: 2px solid #014211;
+}
