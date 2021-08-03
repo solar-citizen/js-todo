@@ -1,5 +1,6 @@
 @import "includes/fonts";
 @import "includes/variables";
+@import "includes/global";
 
 * {
   box-sizing: border-box;
@@ -68,10 +69,7 @@ main {
 
       .todo__title {
         color: #333;
-
-        & > h1 {
-          font-size: 2.25rem;
-        }
+        font-size: 2.25rem;
       }
 
       .todo__tasks {
@@ -90,10 +88,35 @@ main {
             .task__check {
               width: 1.125rem;
               height: 1.125rem;
+              cursor: pointer;
             }
 
-            span {
+            .task__name {
               padding: 0 0.75rem;
+              text-transform: capitalize;
+              position: relative;
+              color: #fa396b;
+            }
+
+            &:hover {
+              .task__delete {
+                content: "";
+                display: block;
+                position: absolute;
+                right: -1.25rem;
+                top: 50%;
+                transform: translateY(-40%);
+                width: 20px;
+                height: 20px;
+                background: url("/icons/trash.png") center (center / cover)
+                  no-repeat;
+                cursor: pointer;
+
+                &:active {
+                  transform: scale(0.95);
+                  transform: translateY(-35%);
+                }
+              }
             }
           }
         }

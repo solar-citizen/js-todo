@@ -18,28 +18,46 @@
         </div>
         <!-- list -->
         <div class="todo__list">
-          <div class="todo__title">
-            <h1>My Tasks</h1>
+          <div>
+            <h1 class="todo__title">My Tasks</h1>
           </div>
           <div class="todo__tasks">
             <ul class="tasks-list">
               <li class="tasks-list__task">
-                <input class="task__check" type="checkbox" />
-                <span>Wake up</span>
-                <div class="task__delete"></div>
+                <input
+                  onclick="finishedTask()"
+                  class="task__check"
+                  type="checkbox"
+                />
+                <span class="task__name"
+                  >Wake up
+                  <div class="task__delete"></div>
+                </span>
               </li>
               <li class="tasks-list__task">
-                <input class="task__check" type="checkbox" />
-                <span>Pay bills</span>
-                <div class="task__delete"></div>
+                <input
+                  onclick="finishedTask()"
+                  class="task__check"
+                  type="checkbox"
+                />
+                <span class="task__name"
+                  >Pay bills
+                  <div class="task__delete"></div>
+                </span>
               </li>
               <li class="tasks-list__task">
-                <input type="checkbox" class="task__check" />
-                <span>Read a book</span>
-                <div class="task__delete"></div>
+                <input
+                  onclick="finishedTask()"
+                  type="checkbox"
+                  class="task__check"
+                />
+                <span class="task__name"
+                  >Read a book
+                  <div class="task__delete"></div>
+                </span>
               </li>
             </ul>
-            <form action="#" class="add-task">
+            <form class="add-task">
               <input type="text" class="add-task__input" />
               <button class="add-task__btn">Add task</button>
             </form>
@@ -47,5 +65,6 @@
         </div>
       </div>
     </main>
+    <script src="js/main.js"></script>
   </body>
 </html>
