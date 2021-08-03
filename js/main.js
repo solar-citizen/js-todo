@@ -18,7 +18,7 @@ function Task(description, completed) {
 }
 
 const createInitialTemplate = () => {
-  if (tasks.length < 3) {
+  if (tasks.length == 0) {
     tasks.push(new Task("Wake up", true));
     tasks.push(new Task("Pay bills", true));
     tasks.push(new Task("Read a book", false));
