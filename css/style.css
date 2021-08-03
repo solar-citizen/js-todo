@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap");
-.finished {
-  color: green !important;
-  text-decoration: line-through;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +28,7 @@ main .todo {
   box-shadow: 0 0 1rem 1px #ccc;
 }
 main .todo__profile {
-  background: url("/img/profile__bg.jpg") center center/cover no-repeat;
+  background: url("../img/profile__bg.jpg") center center/cover no-repeat;
   height: 18.75rem;
   display: flex;
   justify-content: center;
@@ -100,12 +95,19 @@ main .todo__list .todo__tasks .tasks-list__task:hover .task__delete {
   transform: translateY(-40%);
   width: 20px;
   height: 20px;
-  background: url("/icons/trash.png") center center/cover no-repeat;
+  background: url("../icons/trash.png") center center/cover no-repeat;
   cursor: pointer;
 }
 main .todo__list .todo__tasks .tasks-list__task:hover .task__delete:active {
   transform: scale(0.95);
   transform: translateY(-35%);
+}
+main .todo__list .todo__tasks .tasks-list__task.delete {
+  animation: opacity 1s ease-in-out;
+}
+main .todo__list .todo__tasks .tasks-list .finished > .task__name {
+  color: green;
+  text-decoration: line-through;
 }
 main .todo .add-task {
   margin-top: 2.75rem;
@@ -143,4 +145,13 @@ main .todo .add-task__btn:hover {
 main .todo .add-task__btn:active {
   background-color: #026319;
   transform: scale(0.9);
+}
+
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

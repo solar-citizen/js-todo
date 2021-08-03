@@ -1,6 +1,5 @@
 @import "includes/fonts";
 @import "includes/variables";
-@import "includes/global";
 
 * {
   box-sizing: border-box;
@@ -31,7 +30,8 @@ main {
     box-shadow: $boxShadow;
 
     &__profile {
-      background: url("/img/profile__bg.jpg") center (center / cover) no-repeat;
+      background: url("../img/profile__bg.jpg") center (center / cover)
+        no-repeat;
       height: 18.75rem;
       display: flex;
       justify-content: center;
@@ -108,7 +108,7 @@ main {
                 transform: translateY(-40%);
                 width: 20px;
                 height: 20px;
-                background: url("/icons/trash.png") center (center / cover)
+                background: url("../icons/trash.png") center (center / cover)
                   no-repeat;
                 cursor: pointer;
 
@@ -118,6 +118,15 @@ main {
                 }
               }
             }
+
+            &.delete {
+              animation: opacity 1s ease-in-out;
+            }
+          }
+
+          .finished > .task__name {
+            color: green;
+            text-decoration: line-through;
           }
         }
       }
@@ -168,5 +177,14 @@ main {
         }
       }
     }
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
