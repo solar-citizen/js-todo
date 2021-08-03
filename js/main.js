@@ -11,10 +11,19 @@ let todoItemElements = [];
   ? (tasks = [])
   : (tasks = JSON.parse(localStorage.getItem("tasks")));
 
-function Task(description) {
+function Task(description, completed) {
   this.description = description;
-  this.completed = false;
+  this.completed = completed;
+  completed = false;
 }
+
+const createInitialTemplate = () => {
+  if (tasks.length < 3) {
+    tasks.push(new Task("Wake up", true));
+    tasks.push(new Task("Pay bills", true));
+    tasks.push(new Task("Read a book", false));
+  }
+};
 
 // Wake up (green) // Pay bills (green) // Read a book (red)
 const createTemplate = (task, i) => {
@@ -81,4 +90,5 @@ const deleteTask = (i) => {
   }, 750);
 };
 
+createInitialTemplate();
 fillHtmlList();
