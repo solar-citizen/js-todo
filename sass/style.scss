@@ -64,16 +64,18 @@ main {
     }
 
     &__list {
-      padding: 2rem;
-      padding-top: 2.75rem;
+      padding: 1.9rem;
 
       .todo__title {
         color: #333;
-        font-size: 1.15rem;
+
+        & > h1 {
+          font-size: 2.25rem;
+        }
       }
 
       .todo__tasks {
-        padding: 2.5rem 0; //
+        padding-top: 1.75rem;
 
         .tasks-list {
           list-style: none;
@@ -99,19 +101,21 @@ main {
     }
 
     .add-task {
-      margin-top: 2.5rem;
+      margin-top: 2.75rem;
       display: flex;
       flex-direction: column;
 
       & > * {
-        height: 3.375rem;
         border-radius: 7px;
+        font-family: "Oswald", sans-serif;
       }
 
       &__input {
+        height: 3.375rem;
         padding: 0 0.75rem;
         border: 1px solid #ccc;
         box-shadow: $boxShadow inset;
+        font-size: 1rem;
 
         &:hover,
         &:focus,
@@ -122,10 +126,10 @@ main {
       }
 
       &__btn {
+        height: 4.125rem;
         margin-top: 1rem;
         background-color: $btn;
         color: white;
-        font-family: "Oswald", sans-serif;
         font-size: 1.5rem;
         border: 2px solid $btn;
         cursor: pointer;
@@ -137,7 +141,7 @@ main {
 
         &:active {
           background-color: $btnHov;
-          border: 2px solid #014211;
+          transform: scale(0.9);
         }
       }
     }

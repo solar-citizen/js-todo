@@ -56,15 +56,16 @@ main .todo__profile .profile-pic::before {
   left: -4px;
 }
 main .todo__list {
-  padding: 2rem;
-  padding-top: 2.75rem;
+  padding: 1.9rem;
 }
 main .todo__list .todo__title {
   color: #333;
-  font-size: 1.15rem;
+}
+main .todo__list .todo__title > h1 {
+  font-size: 2.25rem;
 }
 main .todo__list .todo__tasks {
-  padding: 2.5rem 0;
+  padding-top: 1.75rem;
 }
 main .todo__list .todo__tasks .tasks-list {
   list-style: none;
@@ -84,28 +85,30 @@ main .todo__list .todo__tasks .tasks-list__task span {
   padding: 0 0.75rem;
 }
 main .todo .add-task {
-  margin-top: 2.5rem;
+  margin-top: 2.75rem;
   display: flex;
   flex-direction: column;
 }
 main .todo .add-task > * {
-  height: 3.375rem;
   border-radius: 7px;
+  font-family: "Oswald", sans-serif;
 }
 main .todo .add-task__input {
+  height: 3.375rem;
   padding: 0 0.75rem;
   border: 1px solid #ccc;
   box-shadow: 0 0 1rem 1px #ccc inset;
+  font-size: 1rem;
 }
 main .todo .add-task__input:hover, main .todo .add-task__input:focus, main .todo .add-task__input:active {
   outline: 2px solid #969696;
   outline-style: auto;
 }
 main .todo .add-task__btn {
+  height: 4.125rem;
   margin-top: 1rem;
   background-color: #037c1f;
   color: white;
-  font-family: "Oswald", sans-serif;
   font-size: 1.5rem;
   border: 2px solid #037c1f;
   cursor: pointer;
@@ -116,5 +119,5 @@ main .todo .add-task__btn:hover {
 }
 main .todo .add-task__btn:active {
   background-color: #026319;
-  border: 2px solid #014211;
+  transform: scale(0.9);
 }
