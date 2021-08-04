@@ -2,7 +2,8 @@
 
 const addTaskBtn = document.querySelector(".add-task__btn"),
   taskInput = document.querySelector(".add-task__input"),
-  tasksList = document.querySelector(".tasks-list");
+  tasksList = document.querySelector(".tasks-list"),
+  emptyMessage = document.querySelector(".empty-message");
 
 let tasks;
 let todoItemElements = [];
@@ -35,7 +36,7 @@ const createTemplate = (task, i) => {
         type="checkbox"
         ${task.completed ? "checked" : ""}
       />
-      <span class="task__name"
+      <span class="task__description"
         >${task.description}
         <div onclick="deleteTask(${i})" class="task__delete"></div>
       </span>
@@ -62,8 +63,10 @@ const updateLocalStorage = () => {
 const updateFill = () => {
   updateLocalStorage();
   fillHtmlList();
+  displayIfEmptyTasks();
 };
 
+// if task completed
 const finishedTask = (i) => {
   tasks[i].completed = !tasks[i].completed;
 
@@ -72,14 +75,9 @@ const finishedTask = (i) => {
   } else {
     todoItemElements[i].classList.remove("finished");
   }
+
   updateFill();
 };
-
-addTaskBtn.addEventListener("click", () => {
-  tasks.push(new Task(taskInput.value));
-  updateFill();
-  taskInput.value = "";
-});
 
 const deleteTask = (i) => {
   todoItemElements[i].classList.add("delete");
@@ -90,5 +88,25 @@ const deleteTask = (i) => {
   }, 750);
 };
 
+const displayIfEmptyTasks = () => {
+  if (!tasks.length) {
+    emptyMessage.style.display = "block";
+  } else {
+    emptyMessage.style.display = "none";
+  }
+};
+
+addTaskBtn.addEventListener("click", (element) => {
+  element.preventDefault();
+
+  if (taskInput.value) {
+    tasks.push(new Task(taskInput.value));
+    updateFill();
+  }
+
+  taskInput.value = "";
+});
+
 createInitialTemplate();
 fillHtmlList();
+displayIfEmptyTasks();

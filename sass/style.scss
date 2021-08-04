@@ -91,7 +91,7 @@ main {
               cursor: pointer;
             }
 
-            .task__name {
+            .task__description {
               padding: 0 0.75rem;
               text-transform: capitalize;
               position: relative;
@@ -124,10 +124,18 @@ main {
             }
           }
 
-          .finished > .task__name {
+          .finished > .task__description {
             color: green;
             text-decoration: line-through;
           }
+        }
+
+        .empty-message {
+          display: none;
+          text-align: center;
+          background-color: blanchedalmond;
+          padding: 1rem 0;
+          border-radius: $borderRad;
         }
       }
     }
@@ -138,7 +146,7 @@ main {
       flex-direction: column;
 
       & > * {
-        border-radius: 7px;
+        border-radius: $borderRad;
         font-family: "Oswald", sans-serif;
       }
 

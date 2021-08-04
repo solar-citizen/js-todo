@@ -80,7 +80,7 @@ main .todo__list .todo__tasks .tasks-list__task .task__check {
   height: 1.125rem;
   cursor: pointer;
 }
-main .todo__list .todo__tasks .tasks-list__task .task__name {
+main .todo__list .todo__tasks .tasks-list__task .task__description {
   padding: 0 0.75rem;
   text-transform: capitalize;
   position: relative;
@@ -105,9 +105,16 @@ main .todo__list .todo__tasks .tasks-list__task:hover .task__delete:active {
 main .todo__list .todo__tasks .tasks-list__task.delete {
   animation: opacity 1s ease-in-out;
 }
-main .todo__list .todo__tasks .tasks-list .finished > .task__name {
+main .todo__list .todo__tasks .tasks-list .finished > .task__description {
   color: green;
   text-decoration: line-through;
+}
+main .todo__list .todo__tasks .empty-message {
+  display: none;
+  text-align: center;
+  background-color: blanchedalmond;
+  padding: 1rem 0;
+  border-radius: 7px;
 }
 main .todo .add-task {
   margin-top: 2.75rem;
