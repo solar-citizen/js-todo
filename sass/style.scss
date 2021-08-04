@@ -36,13 +36,11 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      // height: 100%;
 
       .profile-pic {
         position: relative;
 
         .avatar {
-          // max-width: 6.5rem;
           width: 6.5rem;
           height: auto;
           border: 1px solid transparent;
@@ -124,14 +122,13 @@ main {
             }
           }
 
-          .finished > .task__description {
+          .completed > .task__description {
             color: green;
             text-decoration: line-through;
           }
         }
 
         .empty-message {
-          display: none;
           text-align: center;
           background-color: blanchedalmond;
           padding: 1rem 0;

@@ -105,12 +105,11 @@ main .todo__list .todo__tasks .tasks-list__task:hover .task__delete:active {
 main .todo__list .todo__tasks .tasks-list__task.delete {
   animation: opacity 1s ease-in-out;
 }
-main .todo__list .todo__tasks .tasks-list .finished > .task__description {
+main .todo__list .todo__tasks .tasks-list .completed > .task__description {
   color: green;
   text-decoration: line-through;
 }
 main .todo__list .todo__tasks .empty-message {
-  display: none;
   text-align: center;
   background-color: blanchedalmond;
   padding: 1rem 0;
