@@ -17,6 +17,13 @@ let todoItemElements = [];
 // --- --- functions --- ---
 //
 // task constructor
+// const Task = class {
+//   constructor(description, completed) {
+//     this.description = description;
+//     this.completed = completed;
+//     completed = false;
+//   }
+// };
 const Task = class {
   constructor(description, completed) {
     this.description = description;
@@ -32,6 +39,7 @@ const createInitialTemplate = () => {
     tasks.push(new Task("Pay bills", true));
     tasks.push(new Task("Read a book", false));
   }
+  updateLocalStorage();
 };
 
 // task template
